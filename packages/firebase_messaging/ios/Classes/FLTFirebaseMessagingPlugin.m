@@ -246,7 +246,10 @@ static NSObject<FlutterPluginRegistrar> *_registrar;
   _resumingFromBackground = NO;
   // Removes badge number but doesn't clear push notifications,
   // helpful when you have valuable info in your push notification
-  application.applicationIconBadgeNumber = 0;
+
+  //Quire: this will clear up badge count and notifications in notification center
+  //comment out this feature and we will handle it in app.
+  //application.applicationIconBadgeNumber = 0;
 }
 
 - (BOOL)application:(UIApplication *)application
